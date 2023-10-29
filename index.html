@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKAI Formularz rekrutacyjny</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="">
+    <section id="frontend-task">
+      <form method="POST" class="form-container">
+        <!-- Form title with logo-->
+
+        <div class="form-title">
+          <div class="form-logo"><img src="assets/logo_akai.png" alt="Logo AKAI" /></div>
+          <h1>Formularz rekrutacyjny</h1>
+        </div>
+
+        <div class="form-fields">
+          <!-- First name input -->
+          <div class="form-group">
+            <input type="text" id="first-name" class="c-input-border" required />
+            <label for="first-name">Imię</label>
+            <span id="first-name-error" class="error-message hidden">
+              Imię musi się składać z conajmniej 2 znaków i nie zawierać cyfr oraz znaków specjalnych.</span
+            >
+          </div>
+
+          <!-- Last name input -->
+          <div class="form-group">
+            <input type="text" id="last-name" class="c-input-border" required />
+            <label for="last-name">Nazwisko</label>
+            <span id="last-name-error" class="error-message hidden">
+              Nazwisko musi się składać z conajmniej 2 znaków i nie zawierać cyfr oraz znaków specjalnych.
+            </span>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-group">
+            <input type="text" id="email" class="c-input-border" required />
+            <label for="email">Email</label>
+            <span id="email-error" class="error-message hidden">
+              Email musi być poprawny, np. example@example.pl
+            </span>
+          </div>
+        </div>
+
+        <!-- Checkbox inputs -->
+        <div class="checkbox-container c-input-border">
+          <!-- Checkbox title -->
+          <span class="section-title">Sekcja</span>
+
+          <label class="section-checkbox">
+            <input value="frontend" name="section" type="checkbox" />
+            Frontend
+          </label>
+
+          <label class="section-checkbox">
+            <input value="backend" name="section" type="checkbox" />
+            Backend
+          </label>
+
+          <label class="section-checkbox">
+            <input value="mobile" name="section" type="checkbox" />
+            Mobile
+          </label>
+
+          <label class="section-checkbox">
+            <input value="graphics" name="section" type="checkbox" />
+            Grafika
+          </label>
+        </div>
+
+        <span id="sections-error" class="error-message hidden">Musisz wybrać conajmniej jedną sekcję.</span>
+
+        <!-- Submit button -->
+        <div class="submit-button">
+          <input class="c-input-border" type="submit" value="Prześlij" />
+        </div>
+      </form>
+    </section>
+
+    <script type="text/javascript" src="js/validation.js"></script>
+  </body>
+</html>
