@@ -1,0 +1,151 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;500;600&display=swap');
+
+* {
+  font-family: 'Quicksand', sans-serif;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.filters > h1 {
+  color: white;
+  background: maroon;
+
+  text-align: center;
+  width: 100%;
+  font-size: 3em;
+
+  padding: .5em
+
+}
+
+.types-inputs {
+  font-size: 1em;
+  margin: 1em .5em;
+  
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  row-gap: 0.5em;
+}
+
+.types-inputs > label {
+  padding-left: 1em;
+  text-transform: capitalize;
+
+  cursor: pointer;
+}
+
+.types-inputs > label > input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+
+  margin-right: .3em;
+
+  width: 1.1em;
+  height: 1.1em;
+  border: 2px solid black;
+  border-radius: 0.2em;
+  outline: none;
+}
+
+/* Checkbox */
+.types-inputs > label  > input:not(:checked):hover {
+  background: rgb(227, 227, 227);
+}
+
+.types-inputs > label > input:checked {
+  background: black;
+}
+
+.types-inputs > label > input:checked:after {
+  content: "✔";
+  position: absolute;
+  transform: translate(.05em, -.25em);
+  font-size: 1em;
+  color: white;
+}
+
+.search-input {
+  margin:auto;
+  width: fit-content; 
+}
+
+.search-input > input {
+  padding: .5em 1em;
+  border-radius: 2em;
+}
+
+.search-input > button {
+  background: rgb(227, 227, 227);
+
+  padding: .5em 1em;
+  border-radius: 2em;
+  margin-left: .5em;
+
+  transition: .2s ease;
+}
+
+.search-input > button:hover {
+  background: rgb(39, 39, 39);
+  color: rgb(227, 227, 227);
+  cursor: pointer;
+}
+
+.pokemons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  margin-block: 1em;
+  margin-inline: .5em;
+  gap: .5em;
+}
+
+.pokemons > div {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 2px solid black;
+  border-radius: 1em;
+}
+
+.pokemons > div > h2 {
+  margin: .5em
+}
+
+@media screen and (max-width: 768px) {
+  .types-inputs {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .pokemons {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .types-inputs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pokemons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .types-inputs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pokemons {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
